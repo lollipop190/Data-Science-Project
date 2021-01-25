@@ -1,29 +1,8 @@
 # -*- coding:utf-8 -*-
-# 余弦计算相似度度量 http://blog.csdn.net/u012160689/article/details/15341303
+
 
 import math
 import re
-
-
-# text1 = "This game is one of the very best. games ive  played. the  ;pictures? " \
-#         "cant descripe the real graphics in the game."
-# text2 = "this game have/ is3 one of the very best. games ive  played. the  ;pictures? " \
-#         "cant descriPe now the real graphics in the game."
-# text3 = "So in the picture i saw a nice size detailed metal puzzle. Eager to try since I enjoy 3d wood puzzles, i ordered it. Well to my disappointment I got in the mail a small square about 4 inches around. And to add more disappointment when I built it it was smaller than the palm of my hand. For the price it should of been much much larger. Don't be fooled. It's only worth $5.00.Update 4/15/2013I have bought and completed 13 of these MODELS from A.C. Moore for $5.99 a piece, so i stand by my comment that thiss one is overpriced. It was still fun to build just like all the others from the maker of this brand.Just be warned, They are small."
-# text4 = "I love it when an author can bring you into their made up world and make you feel like a friend, confidant, or family. Having a special child of my own I could relate to the teacher and her madcap class. I've also spent time in similar classrooms and enjoyed the uniqueness of each and every child. Her story drew me into their world and had me laughing so hard my family thought I had lost my mind, so I shared the passage so they could laugh with me. Read this book if you enjoy a book with strong women, you won't regret it."
-#
-# s1 = "def bubbleSort(arr):" \
-# "    for i in range(1, len(arr)):" \
-# "        for j in range(0, len(arr)-i):" \
-# "            if arr[j] > arr[j+1]:" \
-# "                arr[j], arr[j + 1] = arr[j + 1], arr[j]" \
-# "    return arr";
-# s2 = "def sort(Array):" \
-# "    for j in range(1, len(Array)):" \
-# "        for i in range(0, len(Array)-i):" \
-# "            if Array[i] > Array[i+1]:" \
-# "                Array[i], Array[i + 1] = Array[i + 1], Array[i]" \
-# "    return Array";
 
 def compute_cosine(text_a, text_b):
     # 找单词及词频
