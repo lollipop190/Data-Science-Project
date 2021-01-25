@@ -75,12 +75,17 @@ def main():
     parser = argparse.ArgumentParser(usage="classify codes and recommend the best.")
 
     parser.add_argument('-c', '--classification', help='give us a filename and it will automatically classify the code '
-                                                       'according to its language and function.')
+                                                       'according to its language and function.\n'
+                                                       '\nexample: python parser.py -c filename')
     # 给定文件名，进行分类
 
     parser.add_argument('-r', '--recommend', help='input the function(sort, encrypt) + language(java, python, cpp) '
                                                   'or '
-                                                  'the filename to get the recommended code accordingly.')
+                                                  'the filename to get the recommended code accordingly.\n'
+                                                  '\nexample:\n 1.python parser.py -r sort+java\n'
+                                                  '2.python parser.py -r sort+cpp\n'
+                                                  '3.python parser.py -r encrypt+java\n'
+                                                  '4.python parser.py -r sort,encrypt+python\n')
     # 推荐：
     # 第一种情况：不带文件名，则可以输入1，2，3来指定 要排序，还是加密，还是两种都要
     # 第二种情况：带文件名，则根据文件中的内容去推荐对应语言的算法
