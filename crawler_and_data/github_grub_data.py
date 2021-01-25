@@ -4,8 +4,8 @@ from urllib import request
 import os
 import urllib
 import time
-import xlwt
-import selenium
+# import xlwt
+# import selenium
 # encoding=utf8
 
 
@@ -22,7 +22,7 @@ def main():
             addr = get_repositories_addr(url)
             git_addr = get_git_addr(addr)
             print("cloning language: " + lang + " function: " + each  + " address: " + git_addr[0] )
-            os.system("git clone "+ git_addr[0])
+            # os.system("git clone "+ git_addr[0])
             # for add in git_addr:
             #     os.system("git clone " + add)
 
